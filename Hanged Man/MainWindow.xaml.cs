@@ -24,5 +24,10 @@ namespace Hanged_Man
         {
             InitializeComponent();
         }
+
+        private void BTN_alpha_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

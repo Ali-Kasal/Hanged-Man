@@ -6,60 +6,103 @@
         xmlns:local="clr-namespace:Hanged_Man"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        
         <Grid.RowDefinitions>
-            
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        
+            <RowDefinition Height ="10*"/>
+            <RowDefinition Height ="70*"/>
+            <RowDefinition Height ="10*"/>
+            <RowDefinition Height ="10*"/>
         </Grid.RowDefinitions>
-        
-            <TextBlock Grid.RowSpan="2" Grid.ColumnSpan="12"  ></TextBlock>
-            <Button Grid.Row="2" Grid.Column="0" Content="A"></Button>
-            <Button Grid.Row="2" Grid.Column="1" Content="B"></Button>
-            <Button Grid.Row="2" Grid.Column="2" Content="C"></Button>
-            <Button Grid.Row="2" Grid.Column="3" Content="D"></Button>
-            <Button Grid.Row="2" Grid.Column="4" Content="E"></Button>
-            <Button Grid.Row="2" Grid.Column="5" Content="F"></Button>
-            <Button Grid.Row="2" Grid.Column="6" Content="G"></Button>
-            <Button Grid.Row="2" Grid.Column="7" Content="H"></Button>
-            <Button Grid.Row="2" Grid.Column="8" Content="I"></Button>
-            <Button Grid.Row="2" Grid.Column="9" Content="J"></Button>
-            <Button Grid.Row="2" Grid.Column="10" Content="K"></Button>
-            <Button Grid.Row="2" Grid.Column="11" Content="L"></Button>
 
-            <Button Grid.Row="3" Grid.Column="0" Content="M"></Button>
-            <Button Grid.Row="3" Grid.Column="1" Content="N"></Button>
-            <Button Grid.Row="3" Grid.Column="2" Content="O"></Button>
-            <Button Grid.Row="3" Grid.Column="3" Content="P"></Button>
-            <Button Grid.Row="3" Grid.Column="4" Content="Q"></Button>
-            <Button Grid.Row="3" Grid.Column="5" Content="R"></Button>
-            <Button Grid.Row="3" Grid.Column="6" Content="S"></Button>
-            <Button Grid.Row="3" Grid.Column="7" Content="T"></Button>
-            <Button Grid.Row="3" Grid.Column="8" Content="U"></Button>
-            <Button Grid.Row="3" Grid.Column="9" Content="V"></Button>
-            <Button Grid.Row="3" Grid.Column="10" Content="W"></Button>
-            <Button Grid.Row="3" Grid.Column="11" Content="X"></Button>
 
-            <Button Grid.Row="4" Grid.Column="5" Content="Y"></Button>
-            <Button Grid.Row="4" Grid.Column="6" Content="Z"></Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <Label Content="Hanged-Man" FontSize="20" ></Label>
+        </Grid>
+
+        <Grid Grid.Row ="1" Grid.Column ="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Content="A" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="0" Grid.Column="1" Content="B" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="0" Grid.Column="2" Content="C" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="0" Grid.Column="3" Content="D" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="0" Grid.Column="4" Content="E" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="0" Grid.Column="5" Content="F" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="0" Content="G" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="1" Content="H" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="2" Content="I" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="3" Content="J" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="4" Content="K" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="5" Content="L" Click="BTN_alpha_Click"></Button>
+
+            <Button Grid.Row="2" Grid.Column="0" Content="M" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="1" Content="N" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="2" Content="O" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="3" Content="P" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="4" Content="Q" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="5" Content="R" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="0" Content="S" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="1" Content="T" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="2" Content="U" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="3" Content="V" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="4" Content="W" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="5" Content="X" Click="BTN_alpha_Click"></Button>
+
+            <Button Grid.Row="4" Grid.Column="2" Content="Y" Click="BTN_alpha_Click"></Button>
+            <Button Grid.Row="4" Grid.Column="3" Content="Z" Click="BTN_alpha_Click"></Button>
+
+            <Grid.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="10"/>
+                    <Setter Property="Background" Value="#9984D4"/>
+                    <Setter Property="FontSize" Value="30"/>
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+
+                    </Style.Resources>
+                </Style>
+            </Grid.Resources>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <TextBlock></TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="3" Grid.ColumnSpan="2">
+            <Label Content="© Ali Kasal" FontSize="20" ></Label>
+        </Grid>
     </Grid>
+
+
+
 </Window>
