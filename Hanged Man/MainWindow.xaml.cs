@@ -27,7 +27,23 @@ namespace Hanged_Man
 
         private void BTN_alpha_Click(object sender, RoutedEventArgs e)
         {
+            Button btn = sender as Button;
+            String btnContent = btn.Content.ToString();
+            btn.IsEnabled = false;
+            //Votre function 
+        }
 
+        static Random rnd = new Random();
+        int word = rnd.Next(0, 11);
+
+        public void display(string score)
+        {
+           Life.Text = "5";
+           Life.Text = score;
+            if ( IsEnabled == false) ;
+            {
+             
+            }
         }
     }
 }
