@@ -94,5 +94,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressouce\mots5.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressouce\Image_Hang\1.png" />
+    <Resource Include="Ressouce\Image_Hang\2.png" />
+    <Resource Include="Ressouce\Image_Hang\3.png" />
+    <Resource Include="Ressouce\Image_Hang\4.png" />
+    <Resource Include="Ressouce\Image_Hang\5.png" />
+    <Resource Include="Ressouce\Image_Hang\6.png" />
+    <Resource Include="Ressouce\Image_Hang\7.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

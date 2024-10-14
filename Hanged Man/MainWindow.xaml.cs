@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Hanged_Man
     public partial class MainWindow : Window
     {
         private string GuessLetter;
-        private int vies = 5;
+        private int vies = 7;
         private string randomWord;
 
         public MainWindow()
@@ -34,13 +35,35 @@ namespace Hanged_Man
 
         private void setupGame()
         {
-            List<string> list = new List<string> { "vache", "chien", "guepe", "koala", "lapin", "zebre", "ecran", "canon", "epave", "pomme" };
+            string filePath = "../../Ressouce/mots5.txt"; // Chemin verq le fichier .txt
+            List<string> list = new List<string>();
+
+            try
+            {
+                string[] lines = File.ReadAllLines(filePath);
+                foreach (string line in lines)
+                {
+                    list.Add(line.Trim().ToLower());
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Le fichier 'mots.txt' n'a pas été trouvé.");
+                return;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur : " + ex.Message);
+                return;
+            }
+
             Random rnd = new Random();
             int randomIndex = rnd.Next(0, list.Count);
             randomWord = list[randomIndex].ToUpper();
             int wordLength = randomWord.Length;
             string hiddenWord = new string('*', wordLength);
             DisplayHiddenWord(hiddenWord);
+            UpdateLifeCounter(); // Call the UpdateLifeCounter method
         }
 
         public void runGame()
@@ -63,6 +86,7 @@ namespace Hanged_Man
                 else
                 {
                     vies--;
+                    UpdateLifeCounter(); // Call the UpdateLifeCounter method
                 }
 
                 if (vies == 0)
@@ -75,6 +99,7 @@ namespace Hanged_Man
                     MessageBox.Show("Victoire !");
                 }
             }
+            DisplayHiddenWord(Cipher.Text);
         }
 
         private void BTN_alpha_Click(object sender, RoutedEventArgs e)
@@ -90,5 +115,14 @@ namespace Hanged_Man
         {
             Cipher.Text = hiddenWord;
         }
+
+        private void UpdateLifeCounter()
+        {
+            // Mettre à jour l'image en fonction des vies restantes
+            string imagePath = "../../Ressouce/image_Hang/{8 - vies}.png"; // 1.png pour 7 vies, 2.png pour 6 vies, etc.
+            Img_Pendu.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative));
+        }
+
+
     }
 }

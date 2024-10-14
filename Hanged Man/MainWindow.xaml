@@ -74,7 +74,7 @@
 
             <Button Grid.Row="4" Grid.Column="2" Content="Y" Click="BTN_alpha_Click"></Button>
             <Button Grid.Row="4" Grid.Column="3" Content="Z" Click="BTN_alpha_Click"></Button>
-
+            
             <Grid.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Margin" Value="10"/>
@@ -91,8 +91,16 @@
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="0">
-            <TextBlock Name="Life" FontSize="20"></TextBlock>
-            <Label Name="DontTouch"  Content="Lives Left :" FontSize="20" ></Label>
+            <Image x:Name="Img_Pendu" 
+
+   HorizontalAlignment="Center" 
+
+   Height="236" 
+
+   VerticalAlignment="Center" 
+
+   Source="Ressouce/Image_Hang/1.png"/>
+            
         </Grid>
 
         <Grid Grid.Row="2" Grid.Column="0">
