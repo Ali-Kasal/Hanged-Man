@@ -91,16 +91,16 @@
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="0">
-
+            <TextBlock Name="Life" FontSize="20"></TextBlock>
+            <Label Name="DontTouch"  Content="Lives Left :" FontSize="20" ></Label>
         </Grid>
 
         <Grid Grid.Row="2" Grid.Column="0">
-            <TextBlock></TextBlock>
+            <TextBlock x:Name="Cipher"></TextBlock>
         </Grid>
 
         <Grid Grid.Row="2" Grid.Column="1">
-            <TextBlock Name="Life" FontSize="20"></TextBlock>
-            <Label Name="DontTouch"  Content="Lives Left :" FontSize="20" ></Label>
+            
         </Grid>
 
         <Grid Grid.Row="3" Grid.ColumnSpan="2">
