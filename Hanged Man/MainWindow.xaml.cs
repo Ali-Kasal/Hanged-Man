@@ -119,9 +119,11 @@ namespace Hanged_Man
         private void UpdateLifeCounter()
         {
             // Mettre à jour l'image en fonction des vies restantes
-            string imagePath = "../../Ressouce/image_Hang/{8 - vies}.png"; // 1.png pour 7 vies, 2.png pour 6 vies, etc.
+            string imagePath = "Ressouce/Image_Hang/"+(8 - vies)+".png"; // 1.png pour 7 vies, 2.png pour 6 vies, etc.
             Img_Pendu.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative));
         }
+
+
 
 
     }

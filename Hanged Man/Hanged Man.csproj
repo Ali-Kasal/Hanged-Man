@@ -104,7 +104,9 @@
     <Resource Include="Ressouce\Image_Hang\4.png" />
     <Resource Include="Ressouce\Image_Hang\5.png" />
     <Resource Include="Ressouce\Image_Hang\6.png" />
-    <Resource Include="Ressouce\Image_Hang\7.png" />
+    <Resource Include="Ressouce\Image_Hang\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
