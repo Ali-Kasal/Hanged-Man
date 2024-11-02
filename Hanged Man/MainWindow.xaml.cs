@@ -22,8 +22,9 @@ namespace Hanged_Man
     public partial class MainWindow : Window
     {
         private string GuessLetter;
-        private int vies = 7;
+        private int vies = 7; //nbr de vie
         private string randomWord;
+        
 
         public MainWindow()
         {
@@ -63,7 +64,7 @@ namespace Hanged_Man
             int wordLength = randomWord.Length;
             string hiddenWord = new string('*', wordLength);
             DisplayHiddenWord(hiddenWord);
-            UpdateLifeCounter(); // Call the UpdateLifeCounter method
+            UpdateLifeCounter(); // appel la methode UpdateLifeCounter 
         }
 
         public void runGame()
@@ -93,11 +94,13 @@ namespace Hanged_Man
                 if (vies == 0)
                 {
                     MessageBox.Show("Défaite !");
+                    Nope();
                 }
 
                 if (Cipher != null && !Cipher.Text.Contains("*"))
                 {
                     MessageBox.Show("Victoire !");
+                    GG();
                 }
             }
             DisplayHiddenWord(Cipher.Text);
@@ -133,6 +136,21 @@ namespace Hanged_Man
             playMedia.Play();
         }
 
+        private void GG()
+        {
+            MediaPlayer playMedia = new MediaPlayer();
+            var uri = new Uri("../../Ressouce/GG.mp3", UriKind.Relative);
+            playMedia.Open(uri);
+            playMedia.Play();
+        }
+
+        private void Nope()
+        {
+            MediaPlayer playMedia = new MediaPlayer();
+            var uri = new Uri("../../Ressouce/L.mp3", UriKind.Relative);
+            playMedia.Open(uri);
+            playMedia.Play();
+        }
 
     }
 }

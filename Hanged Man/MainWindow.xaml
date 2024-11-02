@@ -104,11 +104,11 @@
         </Grid>
 
         <Grid Grid.Row="2" Grid.Column="0">
-            <TextBlock x:Name="Cipher"></TextBlock>
+            <TextBlock x:Name="Cipher" FontSize="35"></TextBlock>
         </Grid>
 
         <Grid Grid.Row="2" Grid.Column="1">
-            
+            <TextBlock x:Name="Score" FontSize="35"></TextBlock>
         </Grid>
 
         <Grid Grid.Row="3" Grid.ColumnSpan="2">
