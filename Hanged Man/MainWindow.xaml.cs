@@ -35,7 +35,7 @@ namespace Hanged_Man
 
         private void setupGame()
         {
-            string filePath = "../../Ressouce/mots5.txt"; // Chemin verq le fichier .txt
+            string filePath = "../../Ressouce/mots5.txt"; // Chemin vers le fichier .txt
             List<string> list = new List<string>();
 
             try
@@ -86,7 +86,8 @@ namespace Hanged_Man
                 else
                 {
                     vies--;
-                    UpdateLifeCounter(); // Call the UpdateLifeCounter method
+                    Damage(); //appel de Damage 
+                    UpdateLifeCounter(); // appel de la fonction 
                 }
 
                 if (vies == 0)
@@ -124,6 +125,13 @@ namespace Hanged_Man
         }
 
 
+        private void Damage()
+        {
+            MediaPlayer playMedia  = new MediaPlayer();
+            var uri = new Uri("../../Ressouce/dmg.mp3", UriKind.Relative);
+            playMedia.Open(uri);
+            playMedia.Play();
+        }
 
 
     }
