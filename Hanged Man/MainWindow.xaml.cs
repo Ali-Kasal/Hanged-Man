@@ -21,10 +21,9 @@ namespace Hanged_Man
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string GuessLetter;
+        private string GuessLetter; //La lettre cacher
         private int vies = 7; //nbr de vie
-        private string randomWord;
-        
+        private string randomWord; // le mot cacher 
 
         public MainWindow()
         {
@@ -32,14 +31,14 @@ namespace Hanged_Man
             setupGame();
         }
 
-        public TextBox HiddenWordTextBox { get; private set; }
+
 
         private void setupGame()
         {
             string filePath = "../../Ressouce/mots5.txt"; // Chemin vers le fichier .txt
             List<string> list = new List<string>();
 
-            try
+            try // permet de verifier si il y'a un problem avec le fichier text
             {
                 string[] lines = File.ReadAllLines(filePath);
                 foreach (string line in lines)
@@ -52,19 +51,15 @@ namespace Hanged_Man
                 MessageBox.Show("Le fichier 'mots.txt' n'a pas été trouvé.");
                 return;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erreur : " + ex.Message);
-                return;
-            }
+            
 
             Random rnd = new Random();
             int randomIndex = rnd.Next(0, list.Count);
             randomWord = list[randomIndex].ToUpper();
             int wordLength = randomWord.Length;
             string hiddenWord = new string('*', wordLength);
-            DisplayHiddenWord(hiddenWord);
-            UpdateLifeCounter(); // appel la methode UpdateLifeCounter 
+            DisplayHiddenWord(hiddenWord); 
+            UpdateLifeCounter(); // appel la fonction UpdateLifeCounter 
         }
 
         public void runGame()
@@ -122,18 +117,18 @@ namespace Hanged_Man
 
         private void UpdateLifeCounter()
         {
-            // Mettre à jour l'image en fonction des vies restantes
+            // Met à jour l'image en fonction des vies restantes
             string imagePath = "Ressouce/Image_Hang/"+(8 - vies)+".png"; // 1.png pour 7 vies, 2.png pour 6 vies, etc.
             Img_Pendu.Source = new BitmapImage(new Uri(imagePath, UriKind.Relative));
         }
 
 
-        private void Damage()
+        private void Damage() 
         {
             MediaPlayer playMedia  = new MediaPlayer();
-            var uri = new Uri("../../Ressouce/dmg.mp3", UriKind.Relative);
-            playMedia.Open(uri);
-            playMedia.Play();
+            var uri = new Uri("../../Ressouce/dmg.mp3", UriKind.Relative); //recuperl'emplacement du fichier audio
+            playMedia.Open(uri);//ouvre le fichier audio
+            playMedia.Play(); //utilise le fichier audio
         }
 
         private void GG()
